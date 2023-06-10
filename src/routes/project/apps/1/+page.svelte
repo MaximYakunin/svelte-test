@@ -4,10 +4,10 @@
     function add() {
         if (newItem !=='') {
                         todoList=[
-                                    ..todoList,
+                                    ...todoList,
                                     {
                                         задача: newItem,
-                                        завершено: false;
+                                        завершено: false
                                     },
                                 ];
                             newItem='';
