@@ -1,8 +1,4 @@
-<script>
-    import { init_binding_group_dynamic } from "svelte/internal";
-import Page from "../+page.svelte";
-import { routes } from "./routes";
-</script>
+
 <svelte:head>
     <title>Блог</title>
 </svelte:head>
@@ -43,3 +39,8 @@ import { routes } from "./routes";
     color: rgb(10, 10, 139);
      }   
 </style>
+<script>
+    import { init_binding_group_dynamic } from "svelte/internal";
+import Page from "../+page.svelte";
+import { routes } from "./routes";
+</script>
