@@ -13,7 +13,6 @@
     </div>
 </div>   
 
-</div>
 <h1>Портфолио</h1>
 todo..
 <script>
