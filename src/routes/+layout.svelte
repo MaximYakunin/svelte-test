@@ -13,7 +13,7 @@
     <slot></slot>
     </div>
 <script>
-    const nav [
+    const nav= [
        {
         title'Обо мне';
         href:'/about'
