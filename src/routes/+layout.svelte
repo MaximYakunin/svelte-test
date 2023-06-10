@@ -13,7 +13,7 @@
     <slot></slot>
     </div>
 <script>
-    const nav[
+    const nav [
        {
         title'Обо мне';
         href:'/about'
@@ -27,11 +27,11 @@
         href:'/project'
        }, 
        {
-        title'Контакты';
+        title 'Контакты';
         href:'/contact'
        } ,
        {
-        title'temp';
+        title 'temp';
         href:'/temp'
        } 
     ]
