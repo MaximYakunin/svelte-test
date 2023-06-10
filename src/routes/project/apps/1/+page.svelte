@@ -2,17 +2,17 @@
     let newItem='';
     let todoList=[];
     function add() {
-        if (newItem !=="){
-            todoList=[
-                ..todoList,
-                {
-                    задача: newItem,
-                    завершено: false;
-                },
-            ];
-            newItem='';
-        }
-    }
+        if (newItem !=='') {
+                        todoList=[
+                                    ..todoList,
+                                    {
+                                        задача: newItem,
+                                        завершено: false;
+                                    },
+                                ];
+                            newItem='';
+                            }
+                    }
 
 </script>
 <main>
