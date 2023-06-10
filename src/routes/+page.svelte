@@ -1,3 +1,7 @@
+<svelte:head>
+<title>Максим Якунин</title>
+</svelte:head>
+
 <div class="container">
     <div class="info">
         <div class="animate-background">
