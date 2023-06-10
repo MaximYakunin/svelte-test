@@ -5,18 +5,18 @@
     </form>
 </main>
 <script>
-    let newItem="";
-    let todoList=[];
+    let newItem = "";
+    let todoList = [];
     function add() {
         if (newItem !=="") {
-                        todoList=[
+                        todoList = [
                                     ...todoList,
                                     {
                                         задача: newItem,
                                         завершено: false,
                                     },
                                 ];
-                            newItem="";
+                            newItem = "";
                             }
                     }
 
