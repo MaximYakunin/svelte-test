@@ -8,14 +8,14 @@
     <a href="/contact" class="link">Контакты</a>
     </div>
     </div>
-    </nav>
+</nav>
     <div class="container">
     <!-- Pages will be injected below -->
     <slot></slot>
     </div>
-    <style>
+<style>
     .container {
     max-width: 1400px;
     margin: 50px auto;
     }
-    </style>
+</style>
