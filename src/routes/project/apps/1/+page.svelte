@@ -5,10 +5,10 @@
     </form>
 </main>
 <script>
-    let newItem='';
+    let newItem="";
     let todoList=[];
     function add() {
-        if (newItem !=='') {
+        if (newItem !=="") {
                         todoList=[
                                     ...todoList,
                                     {
@@ -16,7 +16,7 @@
                                         завершено: false,
                                     },
                                 ];
-                            newItem='';
+                            newItem="";
                             }
                     }
 
