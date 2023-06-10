@@ -19,7 +19,7 @@
         href: '/about'
        },
        {
-        title: '<Блог>',
+        title: 'Блог',
         href: '/blog'
        }, 
        {
