@@ -1,4 +1,5 @@
 <script>
+     import { init_binding_group_dynamic } from "svelte/internal";
      import { routes } from "./routes.js";
 </script>
 <svelte:head>
@@ -42,7 +43,7 @@
      }   
 </style>
 <script>
-import { init_binding_group_dynamic } from "svelte/internal";
+
 import Page from "../+page.svelte";
 import { routes } from "./routes";
 </script>
