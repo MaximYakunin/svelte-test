@@ -3,7 +3,9 @@
         <a href="/" class="nav-logo" title="Back to Homepage">Максим Якунин</a>
             <div class="nav-links">
                 {#each nav as link}
-                    <a href={link.href} class="link">{link.title}</a>
+                {#if link.isShow}
+                <a href={link.href} class="link">{link.title}</a>
+                {/if}
                 {/each}
             </div>
     </div>
