@@ -15,24 +15,24 @@
 <script>
     const nav= [
        {
-        title'Обо мне';
-        href:'/about'
+        title: 'Обо мне',
+        href: '/about'
        },
        {
-        title'<Блог>';
-        href:'/blog'
+        title: '<Блог>',
+        href: '/blog'
        }, 
        {
-        title'Портфолио';
-        href:'/project'
+        title: 'Портфолио',
+        href: '/project'
        }, 
        {
-        title 'Контакты';
-        href:'/contact'
+        title: 'Контакты',
+        href: '/contact'
        } ,
        {
-        title 'temp';
-        href:'/temp'
+        title: 'temp',
+        href: '/temp'
        } 
     ]
 </script>
