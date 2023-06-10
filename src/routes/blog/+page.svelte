@@ -1,7 +1,5 @@
 <script>
-     import { init_binding_group_dynamic } from "svelte/internal";
-     import Page from "../+page.svelte";
-     import { routes } from "./routes.js";
+    import { routes } from "./routes.js";
 </script>
 <svelte:head>
     <title>Блог</title>
