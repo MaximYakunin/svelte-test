@@ -9,7 +9,7 @@
 <div class="container">
     <h1>Мои статьи</h1>
     <div class="blogposts">
-        {#each routes as Page }
+        {#each routes as page }
             <div class="post">
                 <h2>{page.title}</h2>
                 <p>{page.body}</p>
