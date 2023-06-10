@@ -7,16 +7,16 @@
             <div class="container info-container">
                 <div class="info-text">
                     <h1> 
-                        <p class="animate-text-1">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <p class="animate-text-1">Lorem, ipsum dolor sit amet .</p>
                         <p class="text-2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. </p>
                     </h1>
                 </div>
-                <h2 class="subtitle">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus  amet perferendis excepturi.</h2>
+                    <h2 class="subtitle">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus  amet perferendis excepturi.</h2>
                     <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
                     <div style="color: black;" class="scroll-button animate-scroll" tabindex="0">
-                    <a href="/about">Clock Here</a>
-                    <div class="arrow">&rarr;</div>
-                </div>
+                        <a href="/about">Clock Here</a>
+                        <div class="arrow">&rarr;</div>
+                    </div>
             </div>
         </div>
     </div>
