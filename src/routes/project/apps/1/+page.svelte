@@ -12,7 +12,7 @@
                     <button class="complete" on:click={() => complete(index)}>
                         <Icon name="check-mark" />
                     </button>
-                    <button class="delete" on:click={()=>remove(index)}>
+                    <button class="delete" on:click={() => remove(index)}>
                         <Icon name="delete" />
                 </button>
                 </div>
@@ -21,21 +21,22 @@
     </div>
 </main>
 <script>
-    let newItem = '';
-    let todoList = [];
-    function add() {
-        if (newItem !== '') {
-                todoList = [
-                         ...todoList,
-                        {
-                            task: newItem,
-                            completed: false,
-                        },
-                    ];
-                newItem = '';
-            }
-        }
-import Icon from '../../../../components/Icon.svelte';
+import Icon from '../../../../components/Icon.svelte';    
+let newItem = '';
+let todoList = [];
+function add() {
+    if (newItem !== '') {
+        todoList = [
+             ...todoList,
+            {
+                task: newItem,
+                completed: false,
+            },
+        ];
+        newItem = '';
+    }
+}
+
 function remove(index) {
     todoList.splice(index, 1);
     todoList = todoList;

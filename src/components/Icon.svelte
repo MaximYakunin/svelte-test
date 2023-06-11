@@ -2,7 +2,7 @@
     {@html icon.path}
 </svg>
   
-  <script>
+<script>
     export let name;
     const icons = [
       {
@@ -15,5 +15,5 @@
       },
     ];
     let icon = icons.find((item) => item.name === name);
-  </script>
+</script>
   
