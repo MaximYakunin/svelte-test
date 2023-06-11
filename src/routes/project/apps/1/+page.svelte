@@ -6,8 +6,17 @@
     </form>
     <div class="todos">
         {#each todoList as item, index}
+    <div class="todo" class:comleted={item.completed}>
         <span class="todo_text">{item.task}</span>
-        <div class="todo_buttons"></div>
+        <div class="todo_buttons">
+            <button class="complete" on:click={()=>complete(index)}>
+                <Icon name="check-mark" />
+            </button>
+            <button class="delete" on:click={()=>remove(index)}>
+           <Icon name="delete"/>
+           </button>
+        </div>
+    </div>
          {/each}
     </div>
     </main>
@@ -85,5 +94,32 @@
         text-align: center;
         font-size: 1.5 rem;
         margin: 2em 0;
+    }
+    button {
+        background-color: transparent;
+        border: none;
+    }
+    button.delete,
+    button.delete:hover {
+        color: brown;
+        transition: color 100ms ease-out;
+    }
+    button.complete,
+    button.comlete:hover {
+        color: cadetblue;
+        transition: color 100ms ease-out;
+    }
+    .todo.completed {
+        color: slategray;
+    }
+    .todo.completed .todo\_\_text {
+        text-decoration: line-through;
+    }
+    .todo.completed button {
+        color: silver;
+    }
+    .todos {
+        width: 100%;
+        max-width: 500px;
     }
 </style>
