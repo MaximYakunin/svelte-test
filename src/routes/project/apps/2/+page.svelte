@@ -1,4 +1,4 @@
-<h1>My to-do list</h1>
+<h1>Учет расходов</h1>
 <main>
     <form on:submit|preventDefault={add}>
     <input bind:value={newItem} placeholder="Enter todo"/>
@@ -44,8 +44,6 @@ function complete(index) {
     todoList[index].completed = !todoList[index].completed;
         } 
 </script>
-
-
 <style>
 main {
         display: flex;
@@ -116,7 +114,7 @@ button.delete:hover {
         transition: color 100ms ease-out;
     }
 button.complete,
-button.comlete:hover {
+button.complete:hover {
         color: cadetblue;
         transition: color 100ms ease-out;
     }
