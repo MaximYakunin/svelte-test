@@ -19,7 +19,7 @@
         todoList = todoList;
          }
      function completed(index) {
-        todoList[index].completed = !todoList[index].completed;
+        todoList[index].complete = !todoList[index].completed;
      } 
 </script>
 <main>
