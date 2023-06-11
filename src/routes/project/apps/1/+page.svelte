@@ -13,7 +13,7 @@
                 newItem = '';
             }
         }
-    import icon from '../../../../components/Icon.svelte';
+    import Icon from '../../../../components/Icon.svelte';
     function remove(index) {
         todoList.splice(index,1);
         todoList=todoList;
@@ -33,7 +33,7 @@
             <div class="todo" class:comleted={item.Completed}>
                 <span class="todo_text">{item.Task}</span>
                 <div class="todo_buttons">
-                    <button class="complete" on:click={()=>complete(index)}>
+                    <button class="complete" on:click={() => complete(index)}>
                         <Icon name="check-mark" />
                     </button>
                     <button class="delete" on:click={()=>remove(index)}>
