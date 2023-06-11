@@ -120,10 +120,10 @@ button.comlete:hover {
         color: cadetblue;
         transition: color 100ms ease-out;
     }
-    .todo.completed {
+.todo.completed {
         color: slategray;
     }
-    .todo.completed .todo__text {
+.todo.completed .todo__text {
         text-decoration: line-through;
     }
     .todo.completed button {
