@@ -7,8 +7,7 @@
 <div class="input">
     <input type="text" id="name">
 </div>
-<div class="input"></div>
-<div class="button"></div>
+<button class="button">Отправить --></button>
 
 <table>
 <thead>
