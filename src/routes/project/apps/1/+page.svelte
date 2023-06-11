@@ -13,7 +13,7 @@
                 newItem = '';
             }
         }
-    import Icon from '../../../../components/icon.svelte';
+    import icon from '../../../../components/Icon.svelte';
     function remove(index) {
         todoList.splice(index,1);
         todoList=todoList;
@@ -118,7 +118,7 @@
         color: cadetblue;
         transition: color 100ms ease-out;
     }
-    .todo.Completed {
+    .todo.completed {
         color: slategray;
     }
     .todo.completed .todo_text {
