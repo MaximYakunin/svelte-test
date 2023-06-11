@@ -44,7 +44,6 @@
         todoList[index].completed=!todoList[index].completed;
      } 
 </script>
-
 <style>
     main {
         display: flex;
@@ -84,7 +83,7 @@
     justify-content: space-between;
     align-items: center;
     }
-    .todo\\buttons{
+    .todo_buttons{
         display: flex;
         align-items: center;
         margin-left: 1rem;
