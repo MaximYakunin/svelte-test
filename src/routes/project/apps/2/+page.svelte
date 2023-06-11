@@ -1,7 +1,8 @@
 <h1>Учет расходов</h1>
 <p>Название:</p>
-<label for="name">Имя</label>
-<div class="input"></div>
+<div class="input">
+    <input type="text" id="name">
+</div>
 <p>Сумма:</p>
 <div class="input"></div>
 <div class="button"></div>
