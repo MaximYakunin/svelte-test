@@ -6,8 +6,9 @@
 <p>Сумма:</p>
 <div class="input">
     <input type="text" id="name">
+    <button class="button">Отправить</button>
 </div>
-<button class="button">Отправить --></button>
+
 
 <table>
 <thead>
