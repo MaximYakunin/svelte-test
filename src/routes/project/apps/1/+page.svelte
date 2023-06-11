@@ -35,7 +35,7 @@
                             newItem = "";
                             }
                     }
-    import Icon from '../../../../components/Icon.svelte';
+    import Icon from '../../../../components/icon.svelte';
     function remove(index) {
         todoList.splice(index,1);
         todoList=todoList;
@@ -104,20 +104,18 @@
         background-color: transparent;
         border: none;
     }
-    button.delete,
-    button.delete:hover {
+    button.delete,button.delete:hover {
         color: brown;
         transition: color 100ms ease-out;
     }
-    button.complete,
-    button.comlete:hover {
+    button.comlete,button.comlete:hover {
         color: cadetblue;
         transition: color 100ms ease-out;
     }
     .todo.completed {
         color: slategray;
     }
-    .todo.completed .todo\_\_text {
+    .todo.completed .todo_text {
         text-decoration: line-through;
     }
     .todo.completed button {
