@@ -4,6 +4,9 @@
     <input type="text" id="name">
 </div>
 <p>Сумма:</p>
+<div class="input">
+    <input type="text" id="name">
+</div>
 <div class="input"></div>
 <div class="button"></div>
 
