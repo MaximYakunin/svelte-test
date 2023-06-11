@@ -115,7 +115,7 @@ button.delete:hover {
         color: brown;
         transition: color 100ms ease-out;
     }
-button.comlete,
+button.complete,
 button.comlete:hover {
         color: cadetblue;
         transition: color 100ms ease-out;
