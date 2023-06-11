@@ -1,13 +1,37 @@
+<script>
+    let newItem = '';
+    let todoList = [];
+    function add() {
+        if (newItem !== '') {
+                todoList = [
+                         ...todoList,
+                        {
+                            Task: newItem,
+                            Completed: false,
+                        },
+                    ]
+                newItem = '';
+            }
+        }
+    import Icon from '../../../../components/icon.svelte';
+    function remove(index) {
+        todoList.splice(index,1);
+        todoList=todoList;
+         }
+     function complete(index) {
+        todoList[index].completed=!todoList[index].completed;
+     } 
+</script>
 <main>
     <h1>My to-do list</h1>
     <form on:submit|preventDefault={add}>
-    <input bind:value={newItem} placeholder="Enter to-do"/>
+    <input bind:value={newItem} placeholder="Enter todo"/>
     <button class="add-todo" on:click={add}><span>+</span></button>
     </form>
     <div class="todos">
         {#each todoList as item, index}
-            <div class="todo" class:comleted={item.completed}>
-                <span class="todo_text">{item.task}</span>
+            <div class="todo" class:comleted={item.Completed}>
+                <span class="todo_text">{item.Task}</span>
                 <div class="todo_buttons">
                     <button class="complete" on:click={()=>complete(index)}>
                         <Icon name="check-mark" />
@@ -20,30 +44,7 @@
          {/each}
     </div>
 </main>
-<script>
-    let newItem = "";
-    let todoList = [];
-    function add() {
-        if (newItem !=="") {
-                        todoList = [
-                                    ...todoList,
-                                    {
-                                        задача: newItem,
-                                        завершено: false,
-                                    },
-                                ];
-                            newItem = "";
-                            }
-                    }
-    import Icon from '../../../../components/icon.svelte';
-    function remove(index) {
-        todoList.splice(index,1);
-        todoList=todoList;
-         }
-     function complete(index) {
-        todoList[index].completed=!todoList[index].completed;
-     } 
-</script>
+
 <style>
     main {
         display: flex;
@@ -72,11 +73,15 @@
         margin: 0;
         outline: none;
     }
+    .todos {
+    width: 100%;
+    max-width: 500px;
+    }
     .todo {
     display: flex;
     padding: 20px;
     border-radius: 20px;
-    box-shadow: 0 0 15px rgb(0 0 0 /20%);
+    box-shadow: 0 0 15px rgb(0, 0, 0 /20%);
     background-color: hsla(0, 0%, 100%, 0.2);
     margin-top: 1rem;
     font-size: 1.2rem;
@@ -108,11 +113,12 @@
         color: brown;
         transition: color 100ms ease-out;
     }
-    button.comlete,button.comlete:hover {
+    button.comlete,
+    button.comlete:hover {
         color: cadetblue;
         transition: color 100ms ease-out;
     }
-    .todo.completed {
+    .todo.Completed {
         color: slategray;
     }
     .todo.completed .todo_text {
@@ -121,8 +127,5 @@
     .todo.completed button {
         color: silver;
     }
-    .todos {
-        width: 100%;
-        max-width: 500px;
-    }
+    
 </style>
