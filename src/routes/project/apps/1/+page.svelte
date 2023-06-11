@@ -6,7 +6,7 @@
     </form>
     <div class="todos">
         {#each todoList as item, index}
-            <div class="todo" class:comleted={item.completed}>
+            <div class="todo" class:completed={item.completed}>
                 <span class="todo__text">{item.task}</span>
                 <div class="todo__buttons">
                     <button class="complete" on:click={() => complete(index)}>
@@ -36,7 +36,6 @@ function add() {
         newItem = '';
     }
 }
-
 function remove(index) {
     todoList.splice(index, 1);
     todoList = todoList;
@@ -90,7 +89,7 @@ input {
     justify-content: space-between;
     align-items: center;
     }
-.todo__buttons{
+.todo__buttons {
         display: flex;
         align-items: center;
         margin-left: 1rem;
@@ -102,23 +101,23 @@ input {
         margin: 0;
         flex-shrink: 0;
     }
-    h1 {
+h1 {
         text-align: center;
         font-size: 1.5 rem;
         margin: 2em 0;
     }
-    button {
+button {
         background-color: transparent;
         border: none;
     }
-    button.delete,
-    button.delete:hover {
+button.delete,
+button.delete:hover {
         color: brown;
         transition: color 100ms ease-out;
     }
-    button.comlete,
-    button.comlete:hover {
-        color: rgb(85, 179, 42);
+button.comlete,
+button.comlete:hover {
+        color: cadetblue;
         transition: color 100ms ease-out;
     }
     .todo.completed {
