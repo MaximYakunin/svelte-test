@@ -18,8 +18,8 @@
         todoList.splice(index, 1);
         todoList = todoList;
          }
-     function completed(index) {
-        todoList[index].complete = !todoList[index].completed;
+     function complete(index) {
+        todoList[index].Completed = !todoList[index].Completed;
      } 
 </script>
 <main>
@@ -33,7 +33,7 @@
             <div class="todo" class:comleted={item.Completed}>
                 <span class="todo_text">{item.Task}</span>
                 <div class="todo_buttons">
-                    <button class="complete" on:click={() => completed(index)}>
+                    <button class="complete" on:click={() => complete(index)}>
                         <Icon name="check-mark" />
                     </button>
                     <button class="delete" on:click={()=>remove(index)}>
