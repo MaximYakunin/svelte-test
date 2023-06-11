@@ -7,7 +7,7 @@
                          ...todoList,
                         {
                             Task: newItem,
-                            Completed: false,
+                            Completed: false
                         },
                     ]
                 newItem = '';
@@ -30,7 +30,7 @@
     </form>
     <div class="todos">
         {#each todoList as item, index}
-            <div class="todo" class:comleted={item.completed}>
+            <div class="todo" class:comleted={item.Completed}>
                 <span class="todo_text">{item.Task}</span>
                 <div class="todo_buttons">
                     <button class="complete" on:click={() => completed(index)}>
