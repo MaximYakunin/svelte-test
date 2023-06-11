@@ -6,21 +6,20 @@
     </form>
     <div class="todos">
         {#each todoList as item, index}
-    <div class="todo" class:comleted={item.completed}>
-        <span class="todo_text">{item.task}</span>
-        <div class="todo_buttons">
-            <button class="complete" on:click={()=>complete(index)}>
-                <Icon name="check-mark" />
-            </button>
-            <button class="delete" on:click={()=>remove(index)}>
-           <Icon name="delete"/>
-           </button>
-        </div>
-    </div>
+            <div class="todo" class:comleted={item.completed}>
+                <span class="todo_text">{item.task}</span>
+                <div class="todo_buttons">
+                    <button class="complete" on:click={()=>complete(index)}>
+                        <Icon name="check-mark" />
+                    </button>
+                    <button class="delete" on:click={()=>remove(index)}>
+                <Icon name="delete"/>
+                </button>
+                </div>
+            </div>
          {/each}
     </div>
-       
-    </main>
+</main>
 <script>
     let newItem = "";
     let todoList = [];
