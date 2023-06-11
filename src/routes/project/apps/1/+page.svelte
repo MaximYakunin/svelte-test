@@ -1,5 +1,5 @@
+<h1>My to-do list</h1>
 <main>
-    <h1>My to-do list</h1>
     <form on:submit|preventDefault={add}>
     <input bind:value={newItem} placeholder="Enter todo"/>
     <button class="add-todo" on:click={add}><span>+</span></button>
@@ -29,9 +29,9 @@
                          ...todoList,
                         {
                             task: newItem,
-                            completed: false
+                            completed: false,
                         },
-                    ]
+                    ];
                 newItem = '';
             }
         }
@@ -47,7 +47,7 @@ function complete(index) {
 
 
 <style>
-    main {
+main {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -56,14 +56,14 @@ function complete(index) {
         box-sizing: border-box;
         background: antiquewhite;
     }
-    form {
+form {
         width: 100%;
         max-width: 500px;
         display: flex;
         align-items: center;
         margin-bottom: 1rem;
         }
-    input {
+input {
         flex-grow: 1;
         width: 0;
         border: none;
@@ -74,11 +74,11 @@ function complete(index) {
         margin: 0;
         outline: none;
     }
-    .todos {
+.todos {
     width: 100%;
     max-width: 500px;
     }
-    .todo {
+.todo {
     display: flex;
     padding: 20px;
     border-radius: 20px;
@@ -89,15 +89,15 @@ function complete(index) {
     justify-content: space-between;
     align-items: center;
     }
-    .todo__buttons{
+.todo__buttons{
         display: flex;
         align-items: center;
         margin-left: 1rem;
     }
-    .todo button {
+.todo button {
         width: 32px;
         height: 32px;
-        padding: 4;
+        padding: 4px;
         margin: 0;
         flex-shrink: 0;
     }
