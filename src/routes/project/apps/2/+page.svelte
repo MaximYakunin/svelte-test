@@ -1,6 +1,9 @@
 <h1>Учет расходов</h1>
 <p>Название:</p>
+<div class="input"></div>
 <p>Сумма:</p>
+<div class="input"></div>
+<div class="button"></div>
 
 <table>
 <thead>
