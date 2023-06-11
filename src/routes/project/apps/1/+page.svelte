@@ -6,8 +6,8 @@
                 todoList = [
                          ...todoList,
                         {
-                            Task: newItem,
-                            Completed: false
+                            task: newItem,
+                            completed: false
                         },
                     ]
                 newItem = '';
@@ -19,7 +19,7 @@
         todoList = todoList;
          }
      function complete(index) {
-        todoList[index].Completed = !todoList[index].Completed;
+        todoList[index].completed = !todoList[index].completed;
      } 
 </script>
 <main>
@@ -30,8 +30,8 @@
     </form>
     <div class="todos">
         {#each todoList as item, index}
-            <div class="todo" class:comleted={item.Completed}>
-                <span class="todo_text">{item.Task}</span>
+            <div class="todo" class:comleted={item.completed}>
+                <span class="todo_text">{item.task}</span>
                 <div class="todo_buttons">
                     <button class="complete" on:click={() => complete(index)}>
                         <Icon name="check-mark" />
