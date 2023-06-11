@@ -1,27 +1,3 @@
-<script>
-    let newItem = '';
-    let todoList = [];
-    function add() {
-        if (newItem !== '') {
-                todoList = [
-                         ...todoList,
-                        {
-                            task: newItem,
-                            completed: false
-                        },
-                    ]
-                newItem = '';
-            }
-        }
-    import Icon from '../../../../components/Icon.svelte';
-    function remove(index) {
-        todoList.splice(index, 1);
-        todoList = todoList;
-         }
-     function complete(index) {
-        todoList[index].completed = !todoList[index].completed;
-     } 
-</script>
 <main>
     <h1>My to-do list</h1>
     <form on:submit|preventDefault={add}>
@@ -44,6 +20,31 @@
          {/each}
     </div>
 </main>
+<script>
+    let newItem = '';
+    let todoList = [];
+    function add() {
+        if (newItem !== '') {
+                todoList = [
+                         ...todoList,
+                        {
+                            task: newItem,
+                            completed: false
+                        },
+                    ]
+                newItem = '';
+            }
+        }
+import Icon from '../../../../components/Icon.svelte';
+function remove(index) {
+    todoList.splice(index, 1);
+    todoList = todoList;
+         }
+function complete(index) {
+    todoList[index].completed = !todoList[index].completed;
+        } 
+</script>
+
 
 <style>
     main {
