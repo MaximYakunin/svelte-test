@@ -31,13 +31,13 @@
     <div class="todos">
         {#each todoList as item, index}
             <div class="todo" class:comleted={item.completed}>
-                <span class="todo_text">{item.task}</span>
-                <div class="todo_buttons">
+                <span class="todo__text">{item.task}</span>
+                <div class="todo__buttons">
                     <button class="complete" on:click={() => complete(index)}>
                         <Icon name="check-mark" />
                     </button>
                     <button class="delete" on:click={()=>remove(index)}>
-                        <Icon name="delete"/>
+                        <Icon name="delete" />
                 </button>
                 </div>
             </div>
@@ -88,7 +88,7 @@
     justify-content: space-between;
     align-items: center;
     }
-    .todo_buttons{
+    .todo__buttons{
         display: flex;
         align-items: center;
         margin-left: 1rem;
@@ -122,7 +122,7 @@
     .todo.completed {
         color: slategray;
     }
-    .todo.completed .todo_text {
+    .todo.completed .todo__text {
         text-decoration: line-through;
     }
     .todo.completed button {
