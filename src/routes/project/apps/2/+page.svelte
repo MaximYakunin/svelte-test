@@ -1,8 +1,8 @@
 <h1>Учет расходов</h1>
 <main>
     <form on:submit|preventDefault={add}>
-    <input bind:value={newItem} placeholder="Enter todo"/>
-    <button class="add-todo" on:click={add}><span>+</span></button>
+        <input bind:value={newItem} placeholder="Enter todo"/>
+        <button class="add-todo" on:click={add}><span>+</span></button>
     </form>
     <div class="todos">
         {#each todoList as item, index}
