@@ -15,11 +15,11 @@
         }
     import Icon from '../../../../components/Icon.svelte';
     function remove(index) {
-        todoList.splice(index,1);
-        todoList=todoList;
+        todoList.splice(index, 1);
+        todoList = todoList;
          }
-     function complete(index) {
-        todoList[index].completed=!todoList[index].completed;
+     function completed(index) {
+        todoList[index].completed = !todoList[index].completed;
      } 
 </script>
 <main>
@@ -30,14 +30,14 @@
     </form>
     <div class="todos">
         {#each todoList as item, index}
-            <div class="todo" class:comleted={item.Completed}>
+            <div class="todo" class:comleted={item.completed}>
                 <span class="todo_text">{item.Task}</span>
                 <div class="todo_buttons">
-                    <button class="complete" on:click={() => complete(index)}>
+                    <button class="complete" on:click={() => completed(index)}>
                         <Icon name="check-mark" />
                     </button>
                     <button class="delete" on:click={()=>remove(index)}>
-                <Icon name="delete"/>
+                        <Icon name="delete"/>
                 </button>
                 </div>
             </div>
@@ -109,13 +109,14 @@
         background-color: transparent;
         border: none;
     }
-    button.delete,button.delete:hover {
+    button.delete,
+    button.delete:hover {
         color: brown;
         transition: color 100ms ease-out;
     }
     button.comlete,
     button.comlete:hover {
-        color: cadetblue;
+        color: rgb(85, 179, 42);
         transition: color 100ms ease-out;
     }
     .todo.completed {
