@@ -1,21 +1,19 @@
 <h1>Учет расходов</h1>
-<p>Название:</p>
+<p>Название расхода:</p>
 <div class="input">
-    <input type="text" id="name">
+    <input type="text" bind:value={newName}>
 </div>
 <p>Сумма:</p>
 <div class="input">
-    <input type="text" id="name">
-    <button class="button">Отправить</button>
+    <input type="text" bind:value={newAmount}>
+    <button class="button" on:click={addExpense}>Отправить</button>
 </div>
-
-
 <table>
 <thead>
         <tr>
-            <th>Название</th>
-            <th>Сумма</th>
-            <th>Действия</th>
+            <th>Названия расходов</th>
+            <th>Суммы</th>
+            <th>Действие</th>
         </tr>
 </thead>
 <tbody>
@@ -23,7 +21,7 @@
     <tr>
         <td><div>{expense.name}</div></td>
         <td><div>{expense.amount}</div></td>
-        <td><button on:click={() => deleteExpense(i)}>Улалить</button></td>
+        <td><button on:click={() => deleteExpense(i)}>Удалить</button></td>
     </tr>
         {/each}
 </tbody>
@@ -32,31 +30,18 @@
 let expenses = [];
 let newName = '';
 let newAmount = '';
-
-
-function add() {
-    if (newItem !== '') {
-        todoList = [
-             ...todoList,
+function addExpense() {
+    if (newName !== '' && newAmount !== '') {
+        expenses = [
+             ...expenses,
             {
-                task: newItem,
-                completed: false,
+                name: newName,
+                amount: newAmount,
             },
         ];
-        newItem = '';
+        newName = '', newAmount = '';
     }
 }
-function addExpense() {
-    const obj = {
-name: newName,
-amount: parseInt(newAmount),
-};
-expenses.push(obj);
-expenses = expenses;
-newName = '';
-newAmount = '';
-}
-
 function deleteExpense(index) {
     expenses.splice(index, 1);
     expenses = expenses;
@@ -64,16 +49,12 @@ function deleteExpense(index) {
 
 </script>
 <style>
-label {
-    display: block;
-    margin-bottom: 10px;
-}
 input[type='text'] {
     padding: 5px;
     border: 1px solid #ccc;
     border-radius: 5px;
     margin-right: 10px;
-    width: 150px;
+    width: 200px;
 }
 table {
     margin-top: 20px;

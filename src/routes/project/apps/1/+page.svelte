@@ -44,8 +44,6 @@ function complete(index) {
     todoList[index].completed = !todoList[index].completed;
         } 
 </script>
-
-
 <style>
 main {
         display: flex;
